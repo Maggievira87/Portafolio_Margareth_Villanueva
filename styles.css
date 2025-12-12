@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #F0C0E3, #FFFFFF, #EDD5F2);
+    background-size: 200% 200%;
+    animation: fondoAnimado 8s ease-in-out infinite;
+    color: #C329F0;
+}
+
+
+@keyframes fondoAnimado {
+    0% { background-position: top; }
+    50% { background-position: bottom; }
+    100% { background-position: top; }
+}
+
+
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* CONTENIDO */
+.container {
+    text-align: center;
+    padding: 120px 20px;
+}
+
+h1 {
+    font-size: 90px;
+    margin: 0;
+    line-height: 1.1;
+    color: #C329F0;
+    font-weight: 800;
+}
+
+.desc {
+    margin-top: 30px;
+    font-size: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #5c0f6e;
+}
+
+/* ESTRELLAS nuevo estilo */
+.star {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background: radial-gradient(circle, white, transparent);
+    transform: rotate(45deg);
+    animation: parpadeo 2s infinite ease-in-out;
+    opacity: 0.8;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+.s1 { top: 200px; left: 150px; }
+.s2 { top: 350px; right: 180px; }
+.s3 { bottom: 200px; left: 300px; }
+
+.star {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-bottom: 14px solid #F03C9F;
+    border-left: 20px solid transparent;
+    transform: rotate(35deg);
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+.star:before {
+    border-bottom: 16px solid #F03C9F;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    position: absolute;
+    top: -10px;
+    left: -13px;
+    content: '';
+    transform: rotate(-35deg);
+}
+
+.star:after {
+    position: absolute;
+    top: 2px;
+    left: -21px;
+    width: 0;
+    height: 0;
+    border-right: 20px solid transparent;
+    border-bottom: 14px solid #F03C9F;
+    border-left: 20px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.4; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+
+.talk-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 14px 25px;
+    background: #C329F0;
+    color: white;
+    border: 2px solid #C329F0;
+    border-radius: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.talk-btn:hover {
+    transform: scale(1.15);
+    background: #C329F0;
+    color: white;
+}
+
+.wa-icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(1); /* lo vuelve blanco */
+}
+
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+/* Título */
+.title {
+    font-size: 42px;
+    color: #C329F0;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de cards */
+.custom-card{
+    width: 330px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    background: white;
+}
+
+.card-header-custom{
+    background: #7373DB; /* Morado rosado */
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.card-header-custom h2{
+    color: white;
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.card-body-custom{
+    text-align: center;
+    padding: 25px;
+}
+
+.project-img{
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+.project-desc{
+    color: #444;
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+.btn-github{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color:#48C2DC;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.btn-github:hover{
+    background-color: #47A8DB;
+}
+
+.title {
+    font-size: 42px;
+    color: #7373DB;   /* ← AQUI CAMBIAS EL COLOR */
+    margin-bottom: 15px;
+}
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;   /* 🔥 centra cada card */
+    justify-content: center; /* 🔥 centra todo el grid */
+    max-width: 1100px;
+    margin: 0 auto;          /* 🔥 centra el contenedor */
+    padding-top: 20px;
+}
+
+.section {
+    width: 100%;
+    max-width: 1300px;  /* controla el ancho total del contenido */
+    margin: 0 auto;     /* 🔥 centra absolutamente todo */
+}
+
+
+
+.project-img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* 🔥 Para que no se deforme */
+}
+
+
+
+.custom-card {
+    width: 320px;
+    max-width: 90%;
+}
