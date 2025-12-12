@@ -7,10 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body id="inicio">
 
-    <!-- NAV -->
-    <nav>
+
+<body>
+
+
+
+    <!-- NAV - FIXED PARA QUE NO MUEVA EL CONTENIDO -->
+    <nav class="nav-fixed">
         <a href="#inicio">Inicio</a>
         <a href="#proyectos">Proyectos</a>
         <a href="#acerca-de-mi">Acerca de mí</a>
@@ -18,24 +22,30 @@
     </nav>
 
     <!-- INICIO -->
-    <section class="container">
-        <div class="petalos-container"></div>
-        <h1>¡Hola! Soy Margareth<br>Desarrolladora Web.</h1>
-        <p class="desc">
-            Me apasiona crear experiencias digitales hermosas y centradas en el usuario.
-        </p>
 
-        <!-- BOTÓN FLOTANTE SOLO EN INICIO -->
-        <a class="talk-btn"
-           href="https://wa.me/50375580086?text=Hola,%20vi%20tu%20portafolio%20y%20me%20gustaría%20saber%20más%20sobre%20tu%20servicios.">
-           Hablemos 💬
-        </a>
+    <section id="inicio" class="container hero-section">
+    <div class="flores-container"></div>
 
-        <!-- ESTRELLAS -->
-        <div class="star s1"></div>
-        <div class="star s2"></div>
-        <div class="star s3"></div>
-    </section>
+    <h1>¡Hola! Soy Margareth<br>Desarrolladora Web.</h1>
+
+    <p class="desc">
+        Me apasiona crear experiencias digitales hermosas y centradas en el usuario.
+    </p>
+
+    <!-- Estrellas dentro del inicio -->
+    <div class="star s1"></div>
+    <div class="star s2"></div>
+    <div class="star s3"></div>
+</section>
+
+<!-- BOTÓN WHATSAPP FLOTANTE -->
+<a class="talk-btn"
+   href="https://wa.me/50375580086?text=Hola,%20vi%20tu%20portafolio%20y%20me%20gustaría%20saber%20más%20de%20tus%20servicios."
+   target="_blank">
+   <img src="assets/icons/whatsapp.svg" alt="WhatsApp" class="wa-icon">
+</a>
+
+       
 
     <!-- PROYECTOS -->
     <section id="proyectos" class="section">
@@ -44,7 +54,7 @@
 
         <div class="project-grid">
 
-            <!-- CARD 1 -->
+
             <div class="custom-card">
                 <div class="card-header-custom">
                     <h2>Dashboard</h2>
@@ -56,7 +66,7 @@
                 </div>
             </div>
 
-            <!-- CARD 2 -->
+
             <div class="custom-card">
                 <div class="card-header-custom">
                     <h2>Landing Page</h2>
@@ -68,7 +78,7 @@
                 </div>
             </div>
 
-            <!-- CARD 3 -->
+
             <div class="custom-card">
                 <div class="card-header-custom">
                     <h2>App de Notas</h2>
@@ -80,7 +90,7 @@
                 </div>
             </div>
 
-            <!-- CARD 4 -->
+
             <div class="custom-card">
                 <div class="card-header-custom">
                     <h2>Dashboard</h2>
@@ -92,7 +102,7 @@
                 </div>
             </div>
 
-            <!-- CARD 5 -->
+
             <div class="custom-card">
                 <div class="card-header-custom">
                     <h2>Landing Page</h2>
@@ -104,7 +114,7 @@
                 </div>
             </div>
 
-            <!-- CARD 6 -->
+
             <div class="custom-card">
                 <div class="card-header-custom">
                     <h2>App de Notas</h2>
@@ -119,7 +129,7 @@
         </div>
     </section>
 
-    <!-- ACERCA DE MÍ -->
+    <!-- ACERCA DE MI -->
     <section id="acerca-de-mi" class="about-section">
         <h2 class="title">Acerca de mí</h2>
 
@@ -131,20 +141,37 @@
 
             <div class="about-text">
                 <h3>Hola, soy Margareth ✨</h3>
+
                 <p>
-                    Soy desarrolladora web apasionada por crear diseños estéticos,
-                    funcionales y llenos de vida pastel. Me encanta combinar lo visual
-                    con lo intuitivo, creando experiencias realmente bonitas.
+                    Soy desarrolladora web enfocada en crear interfaces visuales hermosas,
+                    limpias y con una estética pastel muy cuidada.
+                </p>
+
+                <p>
+                    Mi objetivo es crear sitios web que transmitan personalidad y armonía,
+                    siempre priorizando la experiencia del usuario.
                 </p>
 
                 <img class="about-svg" src="assets/svg/decor.svg" alt="">
             </div>
-
+            
         </div>
+
     </section>
 
-</body>
-</html>
+    <!-- CV -->
+    <section id="cv" class="cv-section">
+        <h2 class="title">Mi CV</h2>
+        <p class="desc">Puedes descargar mi hoja de vida aquí:</p>
 
+        <a class="cv-btn" href="#">Descargar CV</a>
+    </section>
+
+    <script src="porta.js"></script>
+
+
+</body>
+
+</html>
 
 
