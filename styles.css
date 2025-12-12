@@ -1,10 +1,10 @@
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
-    background: linear-gradient(180deg, #F0C0E3, #FFFFFF, #EDD5F2);
+    background: linear-gradient(180deg, #5BC8AC,#C3E8E2,#D3E3E3);
     background-size: 200% 200%;
     animation: fondoAnimado 8s ease-in-out infinite;
-    color: #C329F0;
+    color: #98dbc6;
 }
 
 @keyframes fondoAnimado {
@@ -39,7 +39,7 @@ h1 {
     font-size: 90px;
     margin: 0;
     line-height: 1.1;
-    color: #C329F0;
+    color: #EB4997;
     font-weight: 800;
 }
 
