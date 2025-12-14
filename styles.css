@@ -14,19 +14,46 @@ body {
 }
 
 /* === NAV === */
-nav {
+.nav-fixed {
+    position: fixed;
+    top: 0;
     width: 100%;
+    height: 70px;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 35px;
-    padding: 25px 0;
-    font-size: 18px;
-    font-weight: 600;
+    background: linear-gradient(180deg, #5BC8AC,#C3E8E2,#D3E3E3);
+    background-size: 200% 200%;
+    animation: fondoAnimado 8s ease-in-out infinite;
+    z-index: 9999;
 }
 
-nav a {
+/* Links */
+.nav-fixed a {
     text-decoration: none;
-    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    color: #EB4997;
+    position: relative;
+    padding: 5px 0;
+    transition: 0.3s ease;
+}
+
+/* Línea inferior elegante */
+.nav-fixed a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #EB4997;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.3s ease;
+}
+
+.nav-fixed a:hover::after {
+    width: 100%;
 }
 
 /* === INICIO === */
@@ -44,6 +71,8 @@ html {
 section {
     scroll-margin-top: 100px;
 }
+
+#inicio { padding-top: 90px; }
 
 
 
