@@ -139,40 +139,135 @@
     </section>
 
     <!-- ACERCA DE MI -->
-   <section id="acerca-de-mi" class="about-infographic">
+
+    <section id="acerca-de-mi" class="about-infographic">
 
     <div class="about-text">
         <h2>Acerca de mí</h2>
         <p>
-            Soy Margareth, desarrolladora web enfocada en crear interfaces
-            visuales atractivas, modernas y centradas en la experiencia del usuario.
+            Soy Margareth, desarrolladora Full Stack en formación, 
+            con formación en Administración de Empresas y Negocios 
+            Internacionales y experiencia en gestión administrativa, 
+            operaciones y análisis de datos. He trabajado en la optimización 
+            de procesos, automatización y digitalización de servicios empresariales, 
+            aplicando herramientas tecnológicas en áreas clave. Poseo conocimientos 
+            en JavaScript y fundamentos Full Stack, con un enfoque orientado 
+             resultados y mejora continua.
         </p>
     </div>
 
     <div class="about-graphic">
+
+        <!-- Líneas -->
+        <span class="line l1"></span>
+        <span class="line l2"></span>
+        <span class="line l3"></span>
+        <span class="line l4"></span>
 
         <!-- Foto -->
         <div class="profile-photo">
             <img src="img/foto.jpg" alt="Foto de Margareth">
         </div>
 
-        <!-- Íconos -->
-        <div class="icon icon-1">💻</div>
-        <div class="icon icon-2">🎨</div>
-        <div class="icon icon-3">✨</div>
-        <div class="icon icon-4">📱</div>
+        <!-- Íconos SVG -->
+        <div class="icon icon-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+            fill="none" stroke="#EB4997" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+    </div> 
 
-    </div>
+    <div class="icon icon-2">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+        fill="none" stroke="#EB4997" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="13.5" cy="6.5" r="2.5"></circle>
+        <circle cx="17.5" cy="10.5" r="2.5"></circle>
+        <circle cx="8.5" cy="7.5" r="2.5"></circle>
+        <circle cx="6.5" cy="12.5" r="2.5"></circle>
+        <path d="M12 22v-5"></path>
+    </svg>
+</div>
+
+
+
+        <div class="icon icon-3">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+        fill="none" stroke="#EB4997" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2l2.5 5L20 9l-4 4 .9 5L12 16l-4.9 2 .9-5-4-4 5.5-2z"/>
+    </svg>
+</div>
+
+        <div class="icon icon-4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
+        fill="none" stroke="#EB4997" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+        <line x1="8" y1="20" x2="16" y2="20"></line>
+    </svg>
+</div>
 
 </section>
 
+
+   
     <!-- CV -->
     <section id="cv" class="cv-section">
-        <h2 class="title">Mi CV</h2>
-        <p class="desc">Puedes descargar mi hoja de vida aquí:</p>
+  <div class="cv-card">
 
-        <a class="cv-btn" href="#">Descargar CV</a>
-    </section>
+    <!-- FOTO -->
+    <div class="cv-photo">
+      <img src="img/foto.jpg" alt="Foto de Margareth">
+    </div>
+
+    <!-- CONTENIDO DEL CV -->
+    <div class="cv-content">
+
+      <!-- TÍTULO -->
+      <h2>Currículum Profesional</h2>
+      
+      <!-- DESCRIPCIÓN CORTA -->
+      <p class="cv-desc">
+        Soy desarrolladora web en formación, con enfoque en diseño frontend y creación de páginas web modernas, 
+        responsivas y funcionales. Me gusta aprender nuevas tecnologías y crear experiencias visuales atractivas para el usuario.
+      </p>
+
+      <!-- HABILIDADES TÉCNICAS -->
+      <h3>Habilidades</h3>
+      <ul class="cv-skills">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Diseño responsive</li>
+        <li>Git & GitHub</li>
+        <li>Figma (básico)</li>
+      </ul>
+
+      <!-- EDUCACIÓN -->
+      <h3>Educación</h3>
+      <ul class="cv-education">
+        <li>Desarrollo de Software – SENA (En formación)</li>
+      </ul>
+
+      <!-- EXPERIENCIA O PROYECTOS -->
+      <h3>Proyectos</h3>
+      <ul class="cv-experience">
+        <li>Página web de portafolio personal</li>
+        <li>Landing page de calzado (HTML y CSS)</li>
+        <li>Diseño de cards animadas con CSS</li>
+      </ul>
+
+      <!-- BOTÓN PARA DESCARGAR CV -->
+      <a href="cv/Margareth-CV.pdf" download class="cv-btn">
+        Descargar CV
+      </a>
+    </div>
+
+  </div>
+</section>
 
     <script src="script.js"></script>
 
