@@ -591,60 +591,85 @@ section:not(#inicio) {
 /* === FOOTER === */
 
 .footer {
-    background: linear-gradient(180deg, #EB4997, #f27fb1, #ffd1e4);
-    padding: 35px 20px 22px; /* ⬅️ más delgado */
+    background: linear-gradient(180deg, #5BC8AC, #C3E8E2, #D3E3E3);
+    background-size: 200% 200%;
+    animation: fondoAnimado 8s ease-in-out infinite;
+
+    padding: 25px 20px 15px;   /* 🔥 footer delgado */
     text-align: center;
-    margin-top: 90px;       /* ⬅️ menos espacio arriba */
 }
 
-/* Íconos */
+/* ICONOS */
 .footer-icons {
     display: flex;
     justify-content: center;
-    gap: 28px;             /* ⬅️ menos separación */
-    margin-bottom: 14px;
-}
-
-.footer-icons img {
-    width: 28px;           /* ⬅️ más pequeños */
-    height: 28px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.25s ease, opacity 0.25s ease;
-}
-
-.footer-icons a:hover img {
-    transform: scale(1.15);
-    opacity: 0.85;
-}
-
-/* Línea decorativa */
-.footer-line {
-    width: 70px;           /* ⬅️ más corta */
-    height: 2px;
-    background: rgba(255,255,255,0.85);
-    margin: 0 auto 10px;
-    border-radius: 10px;
-}
-
-/* Texto */
-.footer-copy {
-    font-size: 0.95rem;    /* ⬅️ texto más fino */
-    color: #ffffff;
-    font-weight: 500;
-    letter-spacing: 0.4px;
-}
-
-.footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+    gap: 28px;
+    margin-bottom: 12px;
 }
 
 .footer-icons a svg {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 30px;
+    height: 30px;
+    fill:  #EB4997;
+    transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .footer-icons a:hover svg {
+    fill: #EB4997;
     transform: scale(1.2);
-    opacity: 0.85;
+}
+
+.footer-icons a {
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
+}
+
+/* LINEA ELEGANTE */
+.footer-line {
+    width: 60%;
+    height: 1px;
+    margin: 12px auto;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+}
+
+/* TEXTO */
+.footer-copy {
+    color:  #EB4997;
+    font-size: 14px;
+    margin: 6px 0;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .footer-icons {
+        gap: 22px;
+    }
+
+    .footer-copy {
+        font-size: 13px;
+    }
+}
+
+.footer-email {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-email:hover {
+    color: #EB4997;
+    cursor: pointer;
+}
+
+.footer-contact {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-copy:last-child {
+    font-size: 13px;
+    font-weight: 400;
+    opacity: 0.9;
 }
