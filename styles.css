@@ -173,7 +173,7 @@ body:not(#inicio) .talk-btn {
 
 
 .section {
-    padding-top: 0px;   /* SUBE TODA LA SECCIÓN */
+    padding-top: 30px;   /* SUBE TODA LA SECCIÓN */
     padding-left: 60px;
     padding-right: 60px;
     text-align: center;
@@ -440,7 +440,7 @@ html {
 
 /* === SECCIÓN CV === */
 .cv-section {
-  padding: 140px 20px;
+  padding: 140px 15px;
   display: flex;
   justify-content: center;
 }
@@ -492,7 +492,7 @@ html {
 }
 
 .cv-desc {
-  color: #5C0F6E;
+  color:#444;
   line-height: 1.7;
   margin-bottom: 25px;
   text-align: justify;
