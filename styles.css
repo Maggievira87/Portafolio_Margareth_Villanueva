@@ -23,9 +23,11 @@ body {
     justify-content: center;
     align-items: center;
     gap: 35px;
-    background: linear-gradient(180deg, #5BC8AC,#C3E8E2,#D3E3E3);
-    background-size: 200% 200%;
-    animation: fondoAnimado 8s ease-in-out infinite;
+
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
     z-index: 9999;
 }
 
@@ -73,7 +75,7 @@ body {
 /* === INICIO === */
 .container {
     width: 100%;
-    padding: 120px 20px 80px;  /* Ajusta el espacio */
+    padding: 90px 20px 50px;  /* Ajusta el espacio */
     text-align: center;
     margin: 0 auto;
 }
@@ -86,30 +88,29 @@ section {
     scroll-margin-top: 100px;
 }
 
-#inicio { padding-top: 90px; }
+#inicio { 
+    justify-content: flex-start;
+    padding-top: 140px; }
 
 #inicio {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem 1rem;
+  min-height: 85vh;;
+  padding-top: 110px;
+  padding-bottom: 40px;
 }
 
 
 
 h1 {
     font-size: 90px;
-    margin: 0;
-    line-height: 1.1;
+    margin-bottom: 10px; 
+    line-height: 1.05;
     color: #EB4997;
     font-weight: 800;
 }
 
 .desc {
-    margin-top: 20px;
-    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 0;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -119,7 +120,7 @@ h1 {
 #inicio p {
   font-size: clamp(1rem, 3.5vw, 1.2rem);
   max-width: 600px;
-  margin: 1rem auto 0;
+  margin-top: 10px;
   color: #5c0f6e;
 }
 
@@ -201,30 +202,38 @@ body:not(#inicio) .talk-btn {
 
 /* === SECCIÓN PROYECTOS === */
 
-
 .section {
-    padding-top: 30px;   /* SUBE TODA LA SECCIÓN */
+    padding-top: 60px;
+    padding-bottom: 100px; 
     padding-left: 60px;
     padding-right: 60px;
-    text-align: center;
 }
 
 
 
 
 .title {
-    font-size: -20px;
+    text-align: center;
+    font-size: 48px;
     color: #EB4997;
     margin-bottom: 10px;
+}
+
+.desc {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 40px; /* centra y separa de las cards */
+    color: #5C0F6E;
+    font-size: 18px;
 }
 
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 40px;
+    gap: 60px; /* separación REAL */
     max-width: 1200px;
-    margin: 5px auto 0;
-    justify-items: center;
+    margin: 0 auto;
+    align-items: stretch;
 }
 
 
@@ -233,7 +242,7 @@ body:not(#inicio) .talk-btn {
 /* Header morado */
 .card-header-custom {
     background:#EB4997;  
-    padding: 20px;
+    padding: 14px 20px;
     text-align: center;
 }
 
@@ -246,6 +255,13 @@ body:not(#inicio) .talk-btn {
 .card-body-custom {
     padding: 25px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.project-buttons {
+    margin-top: auto;
 }
 
 .project-img {
@@ -276,6 +292,29 @@ body:not(#inicio) .talk-btn {
     background:#5BC8AC;
 }
 
+.project-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 15px;
+}
+
+/* Botón demo */
+.btn-demo {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #EB4997;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+.btn-demo:hover {
+    background: #5BC8AC;
+}
+
 .custom-card:hover {
     transform: translateY(-12px) scale(1.02);
     box-shadow: 0 25px 50px rgba(0,0,0,0.18);
@@ -293,6 +332,16 @@ body:not(#inicio) .talk-btn {
     transform: scale(1.05);
 }
 
+.custom-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: 0.3s ease;
+}
+
 .card-header-custom {
     background: #EB4997;
 }
@@ -301,6 +350,13 @@ body:not(#inicio) .talk-btn {
     background: #ffffff;
 }
 
+#proyectos {
+    margin-bottom: 120px; /* 🔥 separa Proyectos del About */
+}
+
+#proyectos {
+    padding-top: 15px;   /* 🔥 sube título + descripción + cards */
+}
 
 /* === ACERCA DE MÍ === */
 
@@ -309,9 +365,13 @@ body:not(#inicio) .talk-btn {
     align-items: center;
     justify-content: center;
     gap: 90px;
-    padding: 160px 20px;
+
+    padding: 70px 20px;
+    margin-top: 80px;   /* 🔥 separación visual clara */
+
     flex-wrap: wrap;
 }
+
 
 /* TEXTO */
 .about-text {
@@ -448,15 +508,6 @@ html {
 }
 
 
-/* GRID RESPONSIVE */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    gap: 40px;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-}
 
 #inicio {
     min-height: 100vh;      
@@ -609,13 +660,9 @@ section {
     }
 }
 
-section:not(#inicio) {
-    margin-top: 120px;
-}
 
-section:not(#inicio) {
-    margin-top: 120px;
-}
+
+
 
 
 /* === FOOTER === */
@@ -758,3 +805,9 @@ img {
   }
 }
 
+.btn-demo.disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    pointer-events: none;
+}
