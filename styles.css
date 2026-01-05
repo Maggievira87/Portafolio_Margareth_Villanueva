@@ -93,7 +93,7 @@ section {
     padding-top: 140px; }
 
 #inicio {
-  min-height: 85vh;;
+  min-height: 100vh;;
   padding-top: 110px;
   padding-bottom: 40px;
 }
@@ -109,7 +109,7 @@ h1 {
 }
 
 .desc {
-    margin-top: 8px;
+    margin-top: 10px;
     margin-bottom: 0;
     max-width: 700px;
     margin-left: auto;
@@ -500,167 +500,67 @@ body:not(#inicio) .talk-btn {
 
 /* === SECCIÓN CV === */
 
-
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-
-#inicio {
-    min-height: 100vh;      
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
+.btn-cv {
+    display: inline-flex;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    justify-content: center;
+    gap: 12px;
+
+    margin-top: 35px;
+    padding: 16px 40px;
+
+    background: linear-gradient(135deg, #EB4997, #F06AA9);
+    color: white;
+
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+
+    border-radius: 30px;
+    text-decoration: none;
+
+    box-shadow:
+        0 15px 35px rgba(235, 73, 151, 0.35),
+        inset 0 -2px 0 rgba(255,255,255,0.2);
+
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
 }
 
-/* === SECCIÓN CV === */
-
-.cv-section {
-  padding: 60px 15px;
-  display: flex;
-  justify-content: center;
+/* brillo suave */
+.btn-cv::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255,0.25);
+    transform: skewX(-25deg);
+    transition: left 0.6s ease;
 }
 
-.cv-card {
-  display: flex;
-  max-width: 900px;
-  width: 100%;
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.18);
+.btn-cv:hover::before {
+    left: 120%;
 }
 
-/* FOTO */
-.cv-photo {
-  background: #EB4997;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.btn-cv:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow:
+        0 20px 45px rgba(235, 73, 151, 0.45),
+        0 0 18px rgba(91, 200, 172, 0.35);
+    background: linear-gradient(135deg, #5BC8AC, #8FE3CF);
 }
 
-.cv-photo img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 6px solid white;
+/* Estado desactivado */
+.btn-cv.disabled {
+    background: #d8d8d8;
+    color: #777;
+    cursor: not-allowed;
+    pointer-events: none;
+    box-shadow: none;
 }
-
-/* CONTENIDO */
-.cv-content {
-  padding: 40px;
-  flex: 1;
-}
-
-.cv-content h2 {
-  color: #EB4997;
-  font-size: 36px;
-  margin-bottom: 10px;
-}
-
-.cv-content h3 {
-  color: #5BC8AC;
-  font-size: 28px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.cv-desc {
-  color:#444;
-  line-height: 1.7;
-  margin-bottom: 25px;
-  text-align: justify;
-}
-
-.cv-skills,
-.cv-education,
-.cv-experience {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 25px;
-}
-
-.cv-skills li,
-.cv-education li,
-.cv-experience li {
-  color: #444;
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-
-/* Botón */
-.cv-btn {
-  padding: 14px 32px;
-  background: #7373DB;
-  color: white;
-  text-decoration: none;
-  border-radius: 14px;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.cv-btn:hover {
-  background: #5BC8AC;
-  transform: scale(1.05);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .cv-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .cv-photo {
-    padding: 30px;
-  }
-
-  .cv-content h2 {
-    font-size: 30px;
-  }
-
-  .cv-content h3 {
-    font-size: 24px;
-  }
-}
-
-
-
-
-
-section {
-    opacity: 0;
-    transform: translateY(0); /* No empuja hacia abajo */
-    animation: fadeIn 0.8s ease forwards;
-}
-
-
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@media (max-width: 768px) {
-    .about-infographic {
-        flex-direction: column;
-        gap: 50px;
-        text-align: center;
-    }
-}
-
-
 
 
 
@@ -737,20 +637,26 @@ section {
 
 .footer-email:hover {
     color: #EB4997;
-    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.footer-text {
+    max-width: 500px;
+    margin: 0 auto 30px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #DFF3EF;
 }
 
 .footer-contact {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 1.8;
 }
 
-.footer-copy:last-child {
-    font-size: 13px;
-    font-weight: 400;
-    opacity: 0.9;
+#contacto {
+    scroll-margin-top: 80px;
 }
-
 
 
 
