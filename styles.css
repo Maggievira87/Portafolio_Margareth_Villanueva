@@ -6,9 +6,13 @@ html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  overflow-x: hidden;
+  min-height: 100vh;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+}
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -506,6 +510,15 @@ body:not(#inicio) .talk-btn {
 }
 
 
+#acerca-de-mi {
+  margin-bottom: 120px;
+}
+
+#acerca-de-mi {
+  flex-grow: 1;
+}
+
+
 
 
 
@@ -579,151 +592,32 @@ body:not(#inicio) .talk-btn {
 
 /* === FOOTER === */
 
+/* === FOOTER === */
 .footer {
-    background: linear-gradient(180deg, #0B4F4A);
-    background-size: 200% 200%;
-    animation: fondoAnimado 8s ease-in-out infinite;
+  width: 100vw;
+  background-color: #0B4F4A;
+  padding: 50px 20px 30px;
 
-    padding: 25px 20px 15px;   /* 🔥 footer delgado */
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  margin-top: auto;
 }
-
-/* ICONOS */
 .footer-icons {
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    margin-bottom: 12px;
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
 }
 
-.footer-icons a svg {
-    width: 30px;
-    height: 30px;
-    fill: white;
-    transition: transform 0.3s ease, fill 0.3s ease;
+.footer-icons svg {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  transition: transform 0.3s ease;
 }
 
 .footer-icons a:hover svg {
-    fill: white;
-    transform: scale(1.2);
-}
-
-.footer-icons a {
-    pointer-events: auto;
-    z-index: 10;
-    position: relative;
-}
-
-/* LINEA ELEGANTE */
-.footer-line {
-    width: 60%;
-    height: 1px;
-    margin: 12px auto;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 10px;
-}
-
-/* TEXTO */
-.footer-copy {
-    color:  white;
-    font-size: 14px;
-    margin: 6px 0;
-    font-weight: 500;
-}
-
-/* RESPONSIVE */
-@media (max-width: 600px) {
-    .footer-icons {
-        gap: 22px;
-    }
-
-    .footer-copy {
-        font-size: 13px;
-    }
-}
-
-.footer-email {
-    font-size: 17px;
-    font-weight: 700;
-}
-
-.footer-email:hover {
-    color: white;
-    margin-bottom: 10px;
-}
-
-.footer-text {
-    max-width: 500px;
-    margin: 0 auto 30px;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #DFF3EF;
-}
-
-.footer-contact {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.8;
-}
-
-#contacto {
-    scroll-margin-top: 80px;
-}
-
-
-
-
-
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .footer-icons svg {
-    width: 26px;
-    height: 26px;
-  }
-
-  .footer {
-    padding: 1rem 0.5rem;
-  }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-icons {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-
-@media (max-width: 600px) {
-  .footer-icons {
-    gap: 1rem;
-  }
-
-  .footer-copy {
-    font-size: 0.9rem;
-  }
-}
-
-.btn-demo.disabled {
-    background: #ccc;
-    color: #666;
-    cursor: not-allowed;
-    pointer-events: none;
+  transform: scale(1.2);
 }
