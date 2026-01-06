@@ -1,3 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: "Poppins", sans-serif;
@@ -90,11 +101,11 @@ section {
 
 #inicio { 
     justify-content: flex-start;
-    padding-top: 140px; }
+    }
 
 #inicio {
-  min-height: 100vh;;
-  padding-top: 110px;
+  min-height: 100vh;
+  padding-top: 300px; /* 👈 sube este número */
   padding-bottom: 40px;
 }
 
@@ -123,6 +134,7 @@ h1 {
   margin-top: 10px;
   color: #5c0f6e;
 }
+
 
 
 /* === ESTRELLAS === */
@@ -568,7 +580,7 @@ body:not(#inicio) .talk-btn {
 /* === FOOTER === */
 
 .footer {
-    background: linear-gradient(180deg, #5BC8AC, #C3E8E2, #D3E3E3);
+    background: linear-gradient(180deg, #0B4F4A);
     background-size: 200% 200%;
     animation: fondoAnimado 8s ease-in-out infinite;
 
@@ -587,12 +599,12 @@ body:not(#inicio) .talk-btn {
 .footer-icons a svg {
     width: 30px;
     height: 30px;
-    fill:  #EB4997;
+    fill: white;
     transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .footer-icons a:hover svg {
-    fill: #EB4997;
+    fill: white;
     transform: scale(1.2);
 }
 
@@ -613,7 +625,7 @@ body:not(#inicio) .talk-btn {
 
 /* TEXTO */
 .footer-copy {
-    color:  #EB4997;
+    color:  white;
     font-size: 14px;
     margin: 6px 0;
     font-weight: 500;
@@ -636,7 +648,7 @@ body:not(#inicio) .talk-btn {
 }
 
 .footer-email:hover {
-    color: #EB4997;
+    color: white;
     margin-bottom: 10px;
 }
 
@@ -690,8 +702,6 @@ img {
 .footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
 }
 
 .footer-icons {
