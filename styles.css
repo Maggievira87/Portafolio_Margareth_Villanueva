@@ -5,21 +5,18 @@
 html, body {
   margin: 0;
   padding: 0;
-  width: 100%;
   min-height: 100vh;
 }
 
 body {
   display: flex;
   flex-direction: column;
-}
-body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(180deg, #5BC8AC,#C3E8E2,#D3E3E3);
-    background-size: 200% 200%;
-    animation: fondoAnimado 8s ease-in-out infinite;
-    color: #98dbc6;
+
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(180deg, #5BC8AC,#C3E8E2,#D3E3E3);
+  background-size: 200% 200%;
+  animation: fondoAnimado 8s ease-in-out infinite;
+  color: #98dbc6;
 }
 
 @keyframes fondoAnimado {
@@ -28,6 +25,9 @@ body {
     100% { background-position: top; }
 }
 
+.contenido {
+  flex: 1;
+}
 /* === NAV === */
 .nav-fixed {
     position: fixed;
@@ -382,7 +382,7 @@ body:not(#inicio) .talk-btn {
     justify-content: center;
     gap: 90px;
 
-    padding: 70px 20px;
+    padding: 100px ;
     margin-top: 80px;   /* 🔥 separación visual clara */
 
     flex-wrap: wrap;
@@ -509,19 +509,9 @@ body:not(#inicio) .talk-btn {
     text-align: justify;
 }
 
-
 #acerca-de-mi {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
-
-#acerca-de-mi {
-  flex-grow: 1;
-}
-
-
-
-
-
 
 /* === SECCIÓN CV === */
 
@@ -587,28 +577,27 @@ body:not(#inicio) .talk-btn {
     box-shadow: none;
 }
 
+/*footer*/
 
+/* === FOOTER FINAL === */
+footer.footer {
+  margin-top: auto; /* 🔥 lo empuja al final */
+  width: 100%;
 
-
-/* === FOOTER === */
-
-/* === FOOTER === */
-.footer {
-  width: 100vw;
   background-color: #0B4F4A;
-  padding: 50px 20px 30px;
+  padding: 35px 20px 20px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  margin-top: auto;
 }
+
+/* ICONOS */
 .footer-icons {
   display: flex;
   gap: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .footer-icons svg {
@@ -620,4 +609,20 @@ body:not(#inicio) .talk-btn {
 
 .footer-icons a:hover svg {
   transform: scale(1.2);
+}
+
+/* TEXTO */
+.footer-contact p,
+.footer-copy {
+  color: white;
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* LINEA */
+.footer-line {
+  width: 80%;
+  height: 1px;
+  background: rgba(255,255,255,0.3);
+  margin: 12px 0;
 }
