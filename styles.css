@@ -27,6 +27,7 @@ body {
 
 .contenido {
   flex: 1;
+  padding-top: 90px;
 }
 /* === NAV === */
 .nav-fixed {
@@ -44,6 +45,10 @@ body {
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 
     z-index: 9999;
+}
+
+section {
+  scroll-margin-top: 90px; /* altura del navbar */
 }
 
 /* Links */
@@ -185,35 +190,6 @@ h1 {
 .s1 { top: 200px; left: 150px; }
 .s2 { top: 350px; right: 180px; }
 .s3 { bottom: 200px; left: 250px; }
-
-/* === BOTÓN FLOTANTE WHATSAPP === */
-.talk-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background: #25D366; /* verde WhatsApp */
-    border-radius: 50%;
-    padding: 15px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    transition: 0.3s ease;
-    z-index: 9999;
-}
-
-/* Ícono */
-.wa-icon {
-    width: 35px;
-    height: 35px;
-    filter: drop-shadow(0 0 5px rgba(0,0,0,0.3));
-}
-
-.talk-btn:hover {
-    transform: scale(1.15);
-}
-
-/* Ocultar el botón cuando NO es inicio */
-body:not(#inicio) .talk-btn {
-    display: none;
-}
 
 
 /* === SECCIÓN PROYECTOS === */
@@ -367,7 +343,8 @@ body:not(#inicio) .talk-btn {
 }
 
 #proyectos {
-    margin-bottom: 120px; /* 🔥 separa Proyectos del About */
+    margin-bottom: 0;
+    padding-bottom: 40px;
 }
 
 #proyectos {
@@ -380,10 +357,11 @@ body:not(#inicio) .talk-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 90px;
+    gap: 40px;
 
-    padding: 100px ;
-    margin-top: 80px;   /* 🔥 separación visual clara */
+    margin-top: 40px;       /* 🔼 sube la sección */
+    padding-top: 40px;
+    padding-bottom: 80px;  /* 🔽 separación con footer */
 
     flex-wrap: wrap;
 }
@@ -626,3 +604,108 @@ footer.footer {
   background: rgba(255,255,255,0.3);
   margin: 12px 0;
 }
+
+@media (max-width: 768px) {
+
+  /* ===== GENERAL ===== */
+  body {
+    overflow-x: hidden;
+  }
+
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* ===== NAV ===== */
+  .nav-fixed {
+    padding: 10px 0;
+    gap: 10px;
+  }
+
+  /* ===== INICIO ===== */
+  #inicio {
+    padding-top: 160px;
+    padding-bottom: 40px;
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 42px;
+    line-height: 1.2;
+  }
+
+  #inicio p {
+    font-size: 16px;
+  }
+
+  .star {
+    display: none; /* ⭐ quita estrellas en móvil */
+  }
+
+  /* ===== PROYECTOS ===== */
+  .section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .desc {
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+
+  .project-grid {
+    gap: 30px;
+  }
+
+  /* ===== ACERCA DE MI ===== */
+  .about-infographic {
+    flex-direction: column;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    gap: 25px;
+  }
+
+  .about-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 32px;
+  }
+
+  .about-text p {
+    font-size: 15px;
+    text-align: justify;
+  }
+
+  .about-graphic {
+    width: 240px;
+    height: 240px;
+  }
+
+  .icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  /* ===== FOOTER ===== */
+  footer.footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: 120px; /* navbar más alto en móvil */
+  }
+}
+
