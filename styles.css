@@ -114,8 +114,13 @@ section {
 
 #inicio {
   min-height: 100vh;
-  padding-top: 300px; /* 👈 sube este número */
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra vertical */
+  align-items: center;     /* centra horizontal */
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
 }
 
 
